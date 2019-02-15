@@ -1,1 +1,12 @@
-{\rtf1}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tt-name{
+    text-decoration-line: underline;
+    text-decoration-color: #E2231A;
+}
+
+.tt-info{
+    display: none;
+}
