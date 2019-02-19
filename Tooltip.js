@@ -26,13 +26,6 @@ function show(element, term){
     let text = document.createTextNode(definition.meaning_);
     e.append(text);
     element.append(e);
-
-    /*
-    //Adds term meaning as text to <p> then adds that to parent of calling element
-    let text = document.createTextNode(definition.meaning_);
-    e.append(text);
-    element.parentElement.append(e);
-    */
 }
 
 //Purpose: to hide the tooltip text. Called when mouse stops hovering over element.
@@ -41,15 +34,4 @@ function hide(term){
     window.setTimeout(function(){ 
         document.getElementById(term + "_meaning").outerHTML = "";
     }, 150);
-}
-
-//Purpose: When term is clicked, this function calls the function to hide or the function to show the definition based on the definition's current state.
-function toggle(element, term){
-    //Check if element has an inner element (i.e. span has span)
-    if(element.hasChildNodes && element.firstChild.nodeType == Node.ELEMENT_NODE){ //if true, hide the meaning
-        hide(term);
-    }
-    else{
-        show(element, term); //if false, display the meaning
-    }
 }
