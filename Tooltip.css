@@ -8,13 +8,16 @@ p{
 }
 
 .tt-term{
-    text-decoration-line: underline;
+    /* text-decoration-line: underline;
     text-decoration-style: dotted;
-    text-decoration-color: #b3272d;
+    text-decoration-color: #b3272d; */
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #b3272d;
 }
 
 .tt-meaning{
-    position: absolute;
+    /* position: absolute;
     z-index: 100;
     top: 0.5em;
     margin-left: -60px;
@@ -23,5 +26,33 @@ p{
     text-align: center;
     background-color: #646469;
     color: #fff;
-    border-radius: 50px;
+    border-radius: 50px; */
 }
+
+.tt-meaning{
+    /* visibility: hidden; */
+    width: 250px;
+    background-color: #646469;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -125px;
+}
+
+.tt-term .tt-meaning::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #646469 transparent transparent transparent;
+}
+
+
