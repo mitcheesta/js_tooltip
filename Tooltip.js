@@ -29,17 +29,15 @@ function show(element, term){
 
     //Change CSS if term is too close to left screen border
     if(element.offsetLeft <= 75){
-        e.style.border = '1px solid red';
+        // e.style.border = '1px solid red';
         e.style.marginLeft = '-50px';
     }
-    else if(screen.width - element.offsetLeft <= 225){
-        e.style.border = '1px solid blue'; 
+    //Change CSS if term is too close to right screen border
+    else if(window.innerWidth - element.offsetLeft <= 225){
+        // e.style.border = '1px solid blue'; 
         e.style.marginLeft = '0';
         e.style.right = '0';
         e.style.left = '-210%';
-        // e.style.marginLeft = screen.width - 205 + ' px';
-        // e.style.marginRight = '225px';
-        element.parentNode.style.border = '1px solid purple';
     }
 }
 
