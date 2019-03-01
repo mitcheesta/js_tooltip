@@ -19,34 +19,19 @@ function show(element, term){
 
     //Creates <span> with id and class
     let e = document.createElement('span');
-    e.id = term + '_meaning';
-    e.className = 'tt-meaning';
+    e.id = term + "_meaning";
+    e.className = "tt-meaning";
 
     //Adds term meanings as inner text
     let text = document.createTextNode(definition.meaning_);
     e.append(text);
     element.append(e);
-
-    //Change CSS if term is too close to left screen border
-    if(element.offsetLeft <= 75){
-        e.style.border = '1px solid red';
-        e.style.marginLeft = '-50px';
-    }
-    else if(screen.width - element.offsetLeft <= 225){
-        e.style.border = '1px solid blue'; 
-        e.style.marginLeft = '0';
-        e.style.right = '0';
-        e.style.left = '-210%';
-        // e.style.marginLeft = screen.width - 205 + ' px';
-        // e.style.marginRight = '225px';
-        element.parentNode.style.border = '1px solid purple';
-    }
 }
 
 //Purpose: to hide the tooltip text. Called when mouse stops hovering over element.
 function hide(term){
     //Delays hiding by .15 of a second.
     window.setTimeout(function(){ 
-        document.getElementById(term + '_meaning').outerHTML = '';
+        document.getElementById(term + "_meaning").outerHTML = "";
     }, 150);
 }
