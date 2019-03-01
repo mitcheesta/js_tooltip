@@ -1,4 +1,5 @@
 body{
+    padding: 0.5em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
 }
@@ -16,23 +17,34 @@ p{
     width: 250px;
     padding: 10px 10px;
     margin-left: -125px;
-
     position: absolute;
     bottom: 150%;
     left: 50%;
-
     z-index: 1;
-
     text-align: center;
-
     background-color: #646469;
     color: #fff;
-    
     border-radius: 4px;
+
+    /*
+    original
+    
+        padding: 10px 10px;
+        margin-left: -125px;
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        z-index: 1;
+        text-align: center;
+        background-color: #646469;
+        color: #fff;
+        border-radius: 4px;
+    */
+
 
 }
 
-.tt-term .tt-meaning::after {
+/* .tt-term .tt-meaning::after {
     content: " ";
     position: absolute;
     top: 100%;
@@ -41,6 +53,6 @@ p{
     border-width: 5px;
     border-style: solid;
     border-color: #646469 transparent transparent transparent;
-}
+} */
 
 
