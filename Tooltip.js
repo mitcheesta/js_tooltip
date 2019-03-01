@@ -17,12 +17,12 @@ definitionArr.push(new Definition('lorem ipsum', 'A placeholder text commonly us
 function show(element, term){
     let definition = definitionArr.find(definition => definition.term_ == term);
 
-    //Creates <p> with id and class
+    //Creates <span> with id and class
     let e = document.createElement('span');
     e.id = term + "_meaning";
     e.className = "tt-meaning";
 
-    //Adds term meanins as inner
+    //Adds term meanings as inner text
     let text = document.createTextNode(definition.meaning_);
     e.append(text);
     element.append(e);
