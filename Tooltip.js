@@ -33,17 +33,6 @@ function show(element, term){
     arrow.className = 'tt-arrow';
     e.append(arrow);
 
-    /*
-        content: " ";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #646469 transparent transparent transparent;
-    */
-
     //Change CSS if term is too close to left screen border
     if(element.offsetLeft <= 75){
         // e.style.border = '1px solid red';
@@ -53,7 +42,7 @@ function show(element, term){
         arrow.style.left = '25%';
     }
     //Change CSS if term is too close to right screen border
-    else if(window.innerWidth - element.offsetLeft <= 225){
+    else if(window.innerWidth > 400 && window.innerWidth - element.offsetLeft <= 225){
         // e.style.border = '1px solid blue'; 
         e.style.marginLeft = '0';
         e.style.right = '0';
