@@ -26,6 +26,42 @@ function show(element, term){
     let text = document.createTextNode(definition.meaning_);
     e.append(text);
     element.append(e);
+
+    //Create arrow pointing to term
+    let arrow = document.createElement('span');
+    arrow.id = term + '_arrow';
+    arrow.className = 'tt-arrow';
+    e.append(arrow);
+
+    /*
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #646469 transparent transparent transparent;
+    */
+
+    //Change CSS if term is too close to left screen border
+    if(element.offsetLeft <= 75){
+        // e.style.border = '1px solid red';
+        e.style.marginLeft = '-50px';
+
+        let arrow  = e.firstElementChild;
+        arrow.style.left = '25%';
+    }
+    //Change CSS if term is too close to right screen border
+    else if(window.innerWidth - element.offsetLeft <= 225){
+        // e.style.border = '1px solid blue'; 
+        e.style.marginLeft = '0';
+        e.style.right = '0';
+        e.style.left = '-210%';
+
+        let arrow  = e.firstElementChild;
+        arrow.style.left = '75%';
+    }
 }
 
 //Purpose: to hide the tooltip text. Called when mouse stops hovering over element.

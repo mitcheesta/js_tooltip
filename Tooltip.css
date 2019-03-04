@@ -32,7 +32,22 @@ p{
 
 }
 
+<<<<<<< HEAD
 .tt-term .tt-meaning::after {
+=======
+.tt-arrow{
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #646469 transparent transparent transparent;
+}
+
+/* .tt-term .tt-meaning::after {
+>>>>>>> development
     content: " ";
     position: absolute;
     top: 100%;
